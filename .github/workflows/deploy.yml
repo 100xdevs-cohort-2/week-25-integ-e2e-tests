@@ -26,4 +26,4 @@ jobs:
       run: docker-compose version
 
     - name: Run integration script
-      run: ./scripts/run-integration.sh
+      run: ./1-integration-test/scripts/run-integration.sh
