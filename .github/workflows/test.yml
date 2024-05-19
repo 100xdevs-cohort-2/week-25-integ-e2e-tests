@@ -28,5 +28,11 @@ jobs:
     - name: Copy .env.example to .env
       run: cp ./1-integration-test/.env.example ./1-integration-test/.env
 
+    - name: Make wait-for-it.sh executable
+      run: chmod +x ./scripts/wait-for-it.sh
+
+    - name: Wait for Database
+      run: ./scripts/wait-for-it.sh db:5432 --timeout=30 --strict -- echo "Database is up"
+
     - name: Run integration script
       run: cd 1-integration-test && npm run test:integration
