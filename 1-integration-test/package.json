@@ -6,7 +6,8 @@
     "vitest": "^1.6.0"
   },
   "scripts": {
-    "test": "vitest"
+    "test": "vitest",
+    "test:integration": "./scripts/run-integration.sh"
   },
   "devDependencies": {
     "@types/supertest": "^6.0.2",
